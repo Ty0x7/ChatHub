@@ -1,0 +1,42 @@
+/* The running environment is only chat. Setup lives in dialogs and native context menus. */
+body{background:#101216}
+.titlebar,.sidebar,.page-heading,.workspace-toolbar,.workspace-footer{display:none!important}
+.app-layout{height:100%;display:block}
+main{height:100%;padding:0!important;display:flex}
+.columns{gap:0!important;width:100%;height:100%}
+.chat-column{border:0;border-right:1px solid #282c33;border-radius:0;background:#101216}
+.chat-column:last-child{border-right:0}
+.column-head{height:29px;min-height:29px;padding:0 10px!important;border-bottom:1px solid #20252c;background:#111419;gap:8px;-webkit-app-region:drag;user-select:none}
+.column-head .provider-logo,.column-menu,.column-strip,.sample-notice,.column-admin{display:none!important}
+.column-title{display:flex;align-items:baseline;gap:7px}
+.column-title h2{font-size:10px;font-weight:550;color:#b7bfca}
+.column-title p{font-size:9px;color:#5b6776;margin:0;max-width:calc(100% - 75px)}
+.column-status{font-size:7px;letter-spacing:.5px;color:#636e7d}
+.column-status.live{color:#7c9970}
+.column-status.native{color:#727e8d}
+.column-status.setup,.column-status.waiting{color:#a4946e}
+.connection-notice{font-size:10px;line-height:1.6;color:#a4946e;padding:10px;border-bottom:1px solid #2a3038}
+.connection-explanation{font-size:11px;line-height:1.7;color:#94a1b1;margin:-4px 0 16px}
+.mode-field{max-width:230px}
+.chat-feed{padding:8px 10px!important}
+.chat-welcome,.date-divider{display:none}
+.chat-message{font-size:var(--chat-size);padding:5px 0;line-height:1.65}
+.message-actions{display:none!important}
+.composer{padding:7px 9px;border-top:1px solid #252b32}
+.composer-box{background:#171b22;border-color:#2b323d;padding:1px 8px;border-radius:4px}
+.composer-box input{font-size:12px;padding:7px 0}
+.composer-box button,.composer-foot{display:none}
+.panel-empty{padding:25px;max-width:310px}
+.panel-empty .empty-symbol,.panel-empty .button,.panel-empty .text-button{display:none}
+.panel-empty h3{font-size:12px;font-weight:400;color:#8d99a9}
+.panel-empty p{font-size:11px;color:#657285}
+.panel-empty:after{content:'Right-click for connections and controls';display:block;font-size:9px;color:#4e5a6b;margin-top:15px}
+.native-panel.error button{display:none}
+.empty-state{border:0;border-radius:0;background:#101216;padding:0!important;display:flex;justify-content:center;align-items:center;position:relative}
+.empty-state>*{display:none!important}
+.empty-state:before{content:'Right-click to connect a chat';font-size:13px;color:#7c8797}
+.empty-state:after{content:'Ctrl + Shift + C';font-size:10px;color:#444f5f;margin-top:10px;letter-spacing:.4px}
+.empty-state{-webkit-app-region:drag}
+.dialog{-webkit-app-region:no-drag;max-width:calc(100vw - 28px);max-height:calc(100vh - 28px)}
+.toast{bottom:15px;font-size:11px}
+@media(max-width:600px){.connection-form{flex-wrap:wrap}.connection-form .field{flex-basis:100%}.connection-head{flex-wrap:wrap}.connection-head .account-state{margin-left:42px}.settings-grid{grid-template-columns:1fr;gap:0}.dialog{padding:18px}.dialog-top h2{font-size:20px}.column-title p{display:none}.column-status{font-size:6px}.chat-feed{padding:5px 7px!important}}
